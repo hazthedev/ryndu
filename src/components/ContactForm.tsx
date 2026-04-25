@@ -34,6 +34,21 @@ export default function ContactForm({ formspreeId }: ContactFormProps) {
     }
   };
 
+  if (!formspreeId) {
+    return (
+      <div className="rounded-sm border border-grill-orange/20 bg-grill-orange/5 p-6 text-center">
+        <p className="text-sm text-cream/70">Contact form is currently unavailable.</p>
+        <p className="mt-2 text-sm text-cream/70">
+          Please reach us via{' '}
+          <a href="https://wa.me/60123456789" className="text-grill-orange hover:underline" target="_blank" rel="noopener noreferrer">
+            WhatsApp
+          </a>
+          {' '}or call us directly.
+        </p>
+      </div>
+    );
+  }
+
   if (submitted) {
     return (
       <div className="rounded-sm bg-ivory-cream p-6 text-center">

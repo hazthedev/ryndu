@@ -92,5 +92,9 @@ const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
   </head>
   <body class="min-h-screen">
     <slot />
+    <script>
+      import { inject } from '@vercel/analytics';
+      inject();
+    </script>
   </body>
 </html>

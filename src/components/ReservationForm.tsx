@@ -34,6 +34,20 @@ export default function ReservationForm({ formspreeId }: ReservationFormProps) {
     }
   };
 
+  if (!formspreeId) {
+    return (
+      <div className="rounded-sm border border-grill-orange/20 bg-grill-orange/5 p-6 text-center">
+        <p className="text-sm text-cream/70">Reservations are currently unavailable online.</p>
+        <p className="mt-2 text-sm text-cream/70">
+          Please WhatsApp us at{' '}
+          <a href="https://wa.me/60123456789?text=Hi%20Ryndu,%20I%20would%20like%20to%20make%20a%20reservation." className="text-grill-orange hover:underline" target="_blank" rel="noopener noreferrer">
+            +60 12-345 6789
+          </a>
+        </p>
+      </div>
+    );
+  }
+
   if (submitted) {
     return (
       <div className="rounded-sm bg-ivory-cream p-8 text-center sm:p-12">
