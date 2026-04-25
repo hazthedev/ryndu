@@ -1,0 +1,225 @@
+[
+  {
+    "category": "Steaks",
+    "items": [
+      {
+        "name": "Premium Meltique Sirloin",
+        "description": "250g sirloin, seared medium-rare with herb butter. Tender, juicy, plated with roasted vegetables and mashed potato.",
+        "price": "RM38",
+        "image": "/images/plates/sirloin.jpg",
+        "tags": ["halal", "houseFavorite"],
+        "houseFavorite": true
+      },
+      {
+        "name": "Ribeye Steak",
+        "description": "Marbled ribeye, char-grilled to your liking. Served with black pepper sauce and seasonal greens.",
+        "price": "RM35",
+        "image": "/images/plates/ribeye.jpg",
+        "tags": ["halal"]
+      },
+      {
+        "name": "Tenderloin Steak",
+        "description": "Lean, melt-in-your-mouth tenderloin with mushroom sauce and garlic bread.",
+        "price": "RM36",
+        "image": "/images/plates/tenderloin.jpg",
+        "tags": ["halal"]
+      }
+    ]
+  },
+  {
+    "category": "Lamb",
+    "items": [
+      {
+        "name": "Lamb Chop",
+        "description": "The reason most people came the first time. Tender, marinated, plated with care. Pairs with everything.",
+        "price": "RM28",
+        "image": "/images/plates/lamb-chop.jpg",
+        "tags": ["halal", "houseFavorite"],
+        "houseFavorite": true
+      },
+      {
+        "name": "Grilled Lamb Shoulder",
+        "description": "Slow-grilled lamb shoulder with rosemary and mint sauce. Generous portion for sharing.",
+        "price": "RM32",
+        "image": "/images/plates/lamb-shoulder.jpg",
+        "tags": ["halal"]
+      }
+    ]
+  },
+  {
+    "category": "Pasta",
+    "items": [
+      {
+        "name": "Seafood Olio",
+        "description": "Aglio olio with prawns, squid, and mussels. Garlic, chili flakes, olive oil — simple and addictive.",
+        "price": "RM22",
+        "image": "/images/plates/seafood-olio.jpg",
+        "tags": ["halal", "houseFavorite", "spicy"],
+        "houseFavorite": true
+      },
+      {
+        "name": "Chicken Carbonara",
+        "description": "Creamy carbonara with grilled chicken, parmesan, and crispy beef bacon bits.",
+        "price": "RM20",
+        "image": "/images/plates/carbonara.jpg",
+        "tags": ["halal"]
+      },
+      {
+        "name": "Bolognese",
+        "description": "Classic beef bolognese slow-cooked in tomato sauce over al dente spaghetti.",
+        "price": "RM18",
+        "image": "/images/plates/bolognese.jpg",
+        "tags": ["halal"]
+      }
+    ]
+  },
+  {
+    "category": "Burgers",
+    "items": [
+      {
+        "name": "Beef Burger",
+        "description": "Juicy beef patty with cheddar, lettuce, tomato, and Ryndu special sauce. Served with fries.",
+        "price": "RM18",
+        "image": "/images/plates/beef-burger.jpg",
+        "tags": ["halal"]
+      },
+      {
+        "name": "Chicken Burger",
+        "description": "Crispy fried chicken thigh with coleslaw and spicy mayo. A crowd favourite.",
+        "price": "RM16",
+        "image": "/images/plates/chicken-burger.jpg",
+        "tags": ["halal"]
+      },
+      {
+        "name": "Lamb Burger",
+        "description": "Grilled lamb patty with mint yoghurt and caramelised onions.",
+        "price": "RM20",
+        "image": "/images/plates/lamb-burger.jpg",
+        "tags": ["halal"]
+      }
+    ]
+  },
+  {
+    "category": "Sandwiches",
+    "items": [
+      {
+        "name": "Club Sandwich",
+        "description": "Triple-decker with chicken, egg, lettuce, tomato, and cheese. Served with fries.",
+        "price": "RM16",
+        "image": "/images/plates/club-sandwich.jpg",
+        "tags": ["halal"]
+      },
+      {
+        "name": "Chicken Wrap",
+        "description": "Grilled chicken strips with lettuce, tomato, and garlic sauce in a warm tortilla.",
+        "price": "RM14",
+        "image": "/images/plates/chicken-wrap.jpg",
+        "tags": ["halal"]
+      }
+    ]
+  },
+  {
+    "category": "Local Food",
+    "items": [
+      {
+        "name": "Beef Kuetiau",
+        "description": "Silky flat rice noodles stir-fried with tender beef slices, egg, and bean sprouts in dark soy. Local fusion bestseller.",
+        "price": "RM12",
+        "image": "/images/plates/beef-kuetiau.jpg",
+        "tags": ["halal"]
+      },
+      {
+        "name": "Nasi Goreng Ayam",
+        "description": "Fried rice with spiced chicken, egg, and sambal belacan. Malaysian comfort food done right.",
+        "price": "RM14",
+        "image": "/images/plates/nasi-goreng.jpg",
+        "tags": ["halal", "spicy"]
+      },
+      {
+        "name": "Mee Goreng",
+        "description": "Yellow noodles tossed in spicy tomato gravy with chicken, potatoes, and tofu.",
+        "price": "RM12",
+        "image": "/images/plates/mee-goreng.jpg",
+        "tags": ["halal", "spicy"]
+      }
+    ]
+  },
+  {
+    "category": "Sides",
+    "items": [
+      {
+        "name": "Mashed Potato",
+        "description": "Creamy butter mashed potato with gravy.",
+        "price": "RM8",
+        "image": "/images/plates/mashed-potato.jpg",
+        "tags": ["halal", "vegetarian"]
+      },
+      {
+        "name": "French Fries",
+        "description": "Crispy golden fries, lightly salted.",
+        "price": "RM7",
+        "image": "/images/plates/fries.jpg",
+        "tags": ["halal", "vegetarian"]
+      },
+      {
+        "name": "Coleslaw",
+        "description": "Fresh cabbage and carrot slaw in creamy dressing.",
+        "price": "RM6",
+        "image": "/images/plates/coleslaw.jpg",
+        "tags": ["halal", "vegetarian"]
+      }
+    ]
+  },
+  {
+    "category": "Desserts",
+    "items": [
+      {
+        "name": "Chocolate Brownie",
+        "description": "Warm, fudgy chocolate brownie. Free on your birthday — just let us know!",
+        "price": "RM10",
+        "image": "/images/plates/brownie.jpg",
+        "tags": ["halal", "vegetarian"]
+      },
+      {
+        "name": "Ice Cream Scoop",
+        "description": "Vanilla or chocolate. Simple, cold, perfect after a grilled meal.",
+        "price": "RM6",
+        "image": "/images/plates/ice-cream.jpg",
+        "tags": ["halal", "vegetarian"]
+      }
+    ]
+  },
+  {
+    "category": "Drinks",
+    "items": [
+      {
+        "name": "Fresh Orange Juice",
+        "description": "Squeezed fresh, no added sugar.",
+        "price": "RM9",
+        "image": "/images/plates/orange-juice.jpg",
+        "tags": ["halal"]
+      },
+      {
+        "name": "Iced Lemon Tea",
+        "description": "Brewed tea with fresh lemon slices.",
+        "price": "RM7",
+        "image": "/images/plates/lemon-tea.jpg",
+        "tags": ["halal"]
+      },
+      {
+        "name": "Soft Drinks",
+        "description": "Coca-Cola, Sprite, Fanta.",
+        "price": "RM5",
+        "image": "/images/plates/soft-drink.jpg",
+        "tags": ["halal"]
+      },
+      {
+        "name": "Mineral Water",
+        "description": "Chilled bottled water.",
+        "price": "RM3",
+        "image": "/images/plates/water.jpg",
+        "tags": ["halal"]
+      }
+    ]
+  }
+]

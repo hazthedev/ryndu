@@ -1,0 +1,47 @@
+---
+import Container from '../components/Container.astro';
+import Button from '../components/Button.astro';
+---
+
+<section class="relative flex min-h-screen items-center justify-center overflow-hidden bg-deep-charcoal">
+  <!-- Background image with overlay -->
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2000&auto=format&fit=crop"
+      alt="Plated lamb chop with grill marks"
+      class="h-full w-full object-cover opacity-40"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-deep-charcoal via-deep-charcoal/60 to-deep-charcoal/30"></div>
+  </div>
+
+  <Container class="relative z-10 pt-24 pb-16 text-center">
+    <div class="mx-auto max-w-4xl">
+      <!-- Eyebrow -->
+      <p class="mb-6 text-xs font-medium uppercase tracking-[0.25em] text-grill-orange sm:text-sm">
+        Wangsa Maju &middot; Western Grill &middot; Open Till Midnight
+      </p>
+
+      <!-- Headline -->
+      <h1 class="font-display text-4xl font-bold leading-tight text-cream sm:text-5xl md:text-6xl lg:text-7xl">
+        Steakhouse plates.<br />
+        <span class="text-grill-orange">Wangsa Maju prices.</span>
+      </h1>
+
+      <!-- Subhead -->
+      <p class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-cream/70 sm:text-lg">
+        Lamb chop, sirloin, lasagna, pasta — fine-dining presentation from RM9 to RM40. Family-style restaurant since 2015. Halal.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <Button href="/menu" variant="primary">See the Menu</Button>
+        <Button href="/visit" variant="outline">Reserve a Table</Button>
+      </div>
+
+      <!-- Handwritten note -->
+      <p class="mt-10 font-accent text-xl text-brass-gold sm:text-2xl" style="transform: rotate(-2deg);">
+        since 2015 &middot; 940+ recommendations
+      </p>
+    </div>
+  </Container>
+</section>

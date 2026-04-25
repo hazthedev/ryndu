@@ -1,0 +1,46 @@
+---
+import Container from '../components/Container.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import PlateCard from '../components/PlateCard.astro';
+---
+
+<section class="bg-deep-charcoal py-20 sm:py-28">
+  <Container>
+    <SectionHeading
+      eyebrow="What we're known for"
+      heading="Four plates that bring people back."
+      subheading="Most of them order a fifth thing too."
+    />
+
+    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <PlateCard
+        image="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop"
+        name="Lamb Chop"
+        description="The reason most people came the first time. Tender, marinated, plated with care. Pairs with everything."
+        price="RM28"
+        houseFavorite={true}
+      />
+      <PlateCard
+        image="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=600&auto=format&fit=crop"
+        name="Premium Meltique Sirloin"
+        description="250g of premium beef, seared medium-rare with herb butter and roasted vegetables."
+        price="RM38"
+        houseFavorite={true}
+      />
+      <PlateCard
+        image="https://images.unsplash.com/photo-1574868235872-1663edcb4569?q=80&w=600&auto=format&fit=crop"
+        name="Lasagna"
+        description="Layered with rich beef bolognese, béchamel, and melted cheese. A fan favourite since day one."
+        price="RM22"
+        houseFavorite={true}
+      />
+      <PlateCard
+        image="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=600&auto=format&fit=crop"
+        name="Seafood Olio"
+        description="Aglio olio with prawns, squid, and mussels. Garlic, chilli flakes, olive oil — simple and addictive."
+        price="RM22"
+        houseFavorite={true}
+      />
+    </div>
+  </Container>
+</section>

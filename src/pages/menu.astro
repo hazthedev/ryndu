@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import MenuHero from '../sections/MenuHero.astro';
+import MenuPage from '../components/MenuPage';
+import ReservationsCallout from '../sections/ReservationsCallout.astro';
+import OrderCTA from '../sections/OrderCTA.astro';
+---
+
+<BaseLayout
+  title="Menu | Ryndu Hot & Grill | Halal Western & Local Food"
+  description="Browse our menu — steaks, lamb chop, pasta, burgers, sandwiches, local food, desserts and drinks. Fine-dining plates, family-style prices, all halal."
+>
+  <Navbar />
+  <main>
+    <MenuHero />
+    <MenuPage client:load />
+    <ReservationsCallout />
+    <OrderCTA />
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

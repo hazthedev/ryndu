@@ -1,0 +1,29 @@
+---
+import Container from '../components/Container.astro';
+import Button from '../components/Button.astro';
+---
+
+<section class="bg-deep-charcoal py-20 sm:py-28">
+  <Container>
+    <div class="text-center">
+      <h2 class="font-display text-3xl font-bold text-cream sm:text-4xl">Hungry?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-base text-cream/70">
+        Order for pickup, reserve a table, or just say hi. We're usually just a WhatsApp away.
+      </p>
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <Button
+          href={`https://wa.me/${import.meta.env.PUBLIC_WHATSAPP_NUMBER || '60123456789'}?text=Hi%20Ryndu,%20I%20would%20like%20to%20place%20an%20order.`}
+          variant="primary"
+        >
+          WhatsApp Order
+        </Button>
+        <Button
+          href={import.meta.env.PUBLIC_EASYEAT_URL || '#'}
+          variant="outline"
+        >
+          Order on EasyEat
+        </Button>
+      </div>
+    </div>
+  </Container>
+</section>

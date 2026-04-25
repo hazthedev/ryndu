@@ -1,0 +1,110 @@
+---
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Menu', href: '/menu' },
+  { label: 'Visit', href: '/visit' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-deep-charcoal/80 backdrop-blur-md transition-all duration-250">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <a href="/" class="font-display text-2xl font-bold tracking-tight text-cream sm:text-3xl">
+      RYNDU
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden items-center gap-8 md:flex">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'text-sm font-medium transition-colors duration-200',
+            currentPath === link.href ? 'text-grill-orange' : 'text-cream/80 hover:text-cream',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href={`https://wa.me/${import.meta.env.PUBLIC_WHATSAPP_NUMBER || '60123456789'}?text=Hi%20Ryndu,%20I%20would%20like%20to%20make%20a%20reservation.`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-sm bg-grill-orange px-5 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-char-red"
+      >
+        Reserve a Table
+      </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="menu-toggle"
+      class="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <span class="block h-0.5 w-6 bg-cream transition-transform duration-300 origin-center" id="bar-1"></span>
+      <span class="block h-0.5 w-6 bg-cream transition-opacity duration-300" id="bar-2"></span>
+      <span class="block h-0.5 w-6 bg-cream transition-transform duration-300 origin-center" id="bar-3"></span>
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div
+    id="mobile-menu"
+    class="overflow-hidden border-t border-white/5 bg-deep-charcoal transition-all duration-300 md:hidden"
+    style="max-height: 0px; opacity: 0;"
+  >
+    <div class="flex flex-col gap-4 px-4 py-6">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'text-base font-medium transition-colors',
+            currentPath === link.href ? 'text-grill-orange' : 'text-cream/80 hover:text-cream',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href={`https://wa.me/${import.meta.env.PUBLIC_WHATSAPP_NUMBER || '60123456789'}?text=Hi%20Ryndu,%20I%20would%20like%20to%20make%20a%20reservation.`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-2 rounded-sm bg-grill-orange px-5 py-3 text-center text-sm font-medium text-white"
+      >
+        Reserve a Table
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  (function() {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const bar1 = document.getElementById('bar-1');
+    const bar2 = document.getElementById('bar-2');
+    const bar3 = document.getElementById('bar-3');
+    let open = false;
+
+    toggle.addEventListener('click', function() {
+      open = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+      if (open) {
+        menu.style.maxHeight = menu.scrollHeight + 'px';
+        menu.style.opacity = '1';
+        bar1.style.transform = 'translateY(6px) rotate(45deg)';
+        bar2.style.opacity = '0';
+        bar3.style.transform = 'translateY(-6px) rotate(-45deg)';
+      } else {
+        menu.style.maxHeight = '0px';
+        menu.style.opacity = '0';
+        bar1.style.transform = '';
+        bar2.style.opacity = '1';
+        bar3.style.transform = '';
+      }
+    });
+  })();
+</script>

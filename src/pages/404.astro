@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | Ryndu Hot & Grill"
+  description="The page you're looking for doesn't exist. Head back to Ryndu Hot & Grill's homepage."
+>
+  <Navbar />
+  <main class="flex min-h-screen items-center justify-center bg-deep-charcoal px-4 pt-20">
+    <div class="text-center">
+      <p class="font-display text-8xl font-bold text-grill-orange">404</p>
+      <h1 class="mt-4 font-display text-3xl font-bold text-cream sm:text-4xl">Page not found</h1>
+      <p class="mx-auto mt-4 max-w-md text-base text-cream/60">
+        The plate you're looking for isn't on the menu. Let's get you back to something good.
+      </p>
+      <div class="mt-8">
+        <Button href="/" variant="primary">Back to Home</Button>
+      </div>
+    </div>
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

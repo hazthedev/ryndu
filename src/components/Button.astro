@@ -1,0 +1,21 @@
+---
+const { href, variant = 'primary', ...props } = Astro.props;
+
+const base = 'inline-flex items-center justify-center px-6 py-3 font-body text-sm font-medium transition-all duration-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-grill-orange focus:ring-offset-2 focus:ring-offset-deep-charcoal';
+
+const variants = {
+  primary: 'bg-grill-orange text-white hover:bg-char-red hover:shadow-lg hover:shadow-grill-orange/20',
+  outline: 'border-2 border-grill-orange text-grill-orange hover:bg-grill-orange hover:text-white',
+  ghost: 'text-cream hover:text-grill-orange underline-offset-4 hover:underline',
+};
+---
+
+{href ? (
+  <a href={href} class:list={[base, variants[variant]]} {...props}>
+    <slot />
+  </a>
+) : (
+  <button class:list={[base, variants[variant]]} {...props}>
+    <slot />
+  </button>
+)}

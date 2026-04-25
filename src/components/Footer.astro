@@ -1,0 +1,44 @@
+---
+import Container from './Container.astro';
+---
+
+<footer class="bg-wood-brown py-16">
+  <Container>
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Brand -->
+      <div>
+        <p class="font-display text-3xl font-bold text-cream">RYNDU</p>
+        <p class="mt-3 text-sm leading-relaxed text-cream/60">
+          Family-style western grill in Wangsa Maju. Since 2015.
+        </p>
+      </div>
+
+      <!-- Hours & Contact -->
+      <div>
+        <p class="text-xs font-medium uppercase tracking-wider text-cream/40">Hours</p>
+        <div class="mt-3 space-y-1 text-sm text-cream/70">
+          <p>Mon – Fri: 11am – 12am</p>
+          <p>Sat – Sun: 4pm – 12am</p>
+        </div>
+        <p class="mt-4 text-xs font-medium uppercase tracking-wider text-cream/40">Phone</p>
+        <p class="mt-1 text-sm text-cream/70">03-4141 5455</p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <p class="text-xs font-medium uppercase tracking-wider text-cream/40">Links</p>
+        <div class="mt-3 flex flex-col gap-2 text-sm text-cream/70">
+          <a href="/menu" class="transition-colors hover:text-cream">Menu</a>
+          <a href="/visit" class="transition-colors hover:text-cream">Visit & Reservations</a>
+          <a href="https://www.instagram.com/rynduhotgrill" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-cream">Instagram</a>
+          <a href="https://www.facebook.com/rynduhotgrill" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-cream">Facebook</a>
+          <a href={import.meta.env.PUBLIC_EASYEAT_URL || '#'} target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-cream">Order on EasyEat</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-white/10 pt-8 text-center text-xs text-cream/40">
+      <p>&copy; {new Date().getFullYear()} Ryndu Hot & Grill. All rights reserved.</p>
+    </div>
+  </Container>
+</footer>

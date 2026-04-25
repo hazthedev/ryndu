@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import Hero from '../sections/Hero.astro';
+import ValuePromise from '../sections/ValuePromise.astro';
+import SignaturePlates from '../sections/SignaturePlates.astro';
+import LocalSide from '../sections/LocalSide.astro';
+import Perks from '../sections/Perks.astro';
+import Reviews from '../sections/Reviews.astro';
+import LateNightBanner from '../sections/LateNightBanner.astro';
+import FindUsTeaser from '../sections/FindUsTeaser.astro';
+---
+
+<BaseLayout
+  title="Ryndu Hot & Grill | Steakhouse Plates, Wangsa Maju Prices | Halal Western"
+  description="Lamb chop, sirloin, lasagna, pasta — fine-dining presentation from RM9-RM40. Family-style halal western restaurant in Wangsa Maju, KL. Open till midnight. Reservations welcome."
+>
+  <Navbar />
+  <main>
+    <Hero />
+    <ValuePromise />
+    <SignaturePlates />
+    <LocalSide />
+    <Perks />
+    <Reviews />
+    <LateNightBanner />
+    <FindUsTeaser />
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

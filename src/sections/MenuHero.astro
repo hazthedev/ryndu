@@ -1,0 +1,22 @@
+---
+import Container from '../components/Container.astro';
+---
+
+<section class="relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-deep-charcoal pt-20">
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2000&auto=format&fit=crop"
+      alt="Restaurant table setting"
+      class="h-full w-full object-cover opacity-20"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-deep-charcoal/50 to-deep-charcoal"></div>
+  </div>
+
+  <Container class="relative z-10 text-center">
+    <p class="text-xs font-medium uppercase tracking-[0.25em] text-grill-orange">Our Menu</p>
+    <h1 class="mt-4 font-display text-4xl font-bold text-cream sm:text-5xl md:text-6xl">The Menu</h1>
+    <p class="mx-auto mt-4 max-w-xl text-base text-cream/70 sm:text-lg">
+      Fine-dining plates, family-style prices, all halal.
+    </p>
+  </Container>
+</section>

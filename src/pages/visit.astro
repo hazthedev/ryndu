@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import VisitHero from '../sections/VisitHero.astro';
+import VisitPerks from '../sections/VisitPerks.astro';
+import VisitDetails from '../sections/VisitDetails.astro';
+import SocialBlock from '../sections/SocialBlock.astro';
+---
+
+<BaseLayout
+  title="Visit & Reservations | Ryndu Hot & Grill | Wangsa Maju"
+  description="Find us in Wangsa Maju, KL. Book a table, view our hours, get directions. Family-style halal western grill open till midnight."
+>
+  <Navbar />
+  <main>
+    <VisitHero />
+    <VisitPerks />
+    <VisitDetails />
+    <SocialBlock />
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

@@ -1,0 +1,49 @@
+---
+import Container from '../components/Container.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import reviews from '../data/reviews.json';
+---
+
+<section class="bg-deep-charcoal py-20 sm:py-28">
+  <Container>
+    <SectionHeading
+      eyebrow="Reviews"
+      heading="4.2 / 5 from 720+ Google reviewers · 76% recommend on Facebook"
+      subheading="Real words from real diners."
+    />
+
+    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {reviews.map((review) => (
+        <div class="rounded-sm bg-ivory-cream p-8">
+          <!-- Stars -->
+          <div class="flex gap-1 text-brass-gold">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill={i < review.rating ? 'currentColor' : 'none'}
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            ))}
+          </div>
+
+          <blockquote class="mt-4 text-sm leading-relaxed text-deep-charcoal/80">
+            "{review.quote}"
+          </blockquote>
+
+          <div class="mt-6 flex items-center justify-between">
+            <p class="text-sm font-medium text-deep-charcoal">{review.name}</p>
+            <p class="text-xs text-deep-charcoal/40">{review.source}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

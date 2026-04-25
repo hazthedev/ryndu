@@ -1,0 +1,51 @@
+---
+import Container from '../components/Container.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import CountUp from '../components/CountUp';
+---
+
+<section class="bg-ivory-cream py-20 sm:py-28">
+  <Container>
+    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <!-- Text content -->
+      <div>
+        <SectionHeading
+          eyebrow="Why we're still here"
+          heading="Restaurant plates. Café prices."
+          subheading="The presentation is hotel-grade. The bill won't be. We're a family restaurant, not a special-occasion splurge — so we cook like one."
+          align="left"
+          light={true}
+        />
+
+        <div class="mt-12 grid gap-8 sm:grid-cols-3">
+          <div>
+            <p class="font-display text-3xl font-bold text-grill-orange">
+              <CountUp client:visible target={18} prefix="RM" />
+            </p>
+            <p class="mt-1 text-sm text-deep-charcoal/60">Lamb Chop from RM18</p>
+          </div>
+          <div>
+            <p class="font-display text-3xl font-bold text-grill-orange">
+              <CountUp client:visible target={940} suffix="+" />
+            </p>
+            <p class="mt-1 text-sm text-deep-charcoal/60">FB Recommendations</p>
+          </div>
+          <div>
+            <p class="font-display text-3xl font-bold text-grill-orange">12am</p>
+            <p class="mt-1 text-sm text-deep-charcoal/60">Open till midnight</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="relative overflow-hidden rounded-sm">
+        <img
+          src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=1000&auto=format&fit=crop"
+          alt="Premium plated sirloin steak"
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </Container>
+</section>

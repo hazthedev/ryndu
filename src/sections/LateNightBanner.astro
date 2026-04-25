@@ -1,0 +1,38 @@
+---
+import Container from '../components/Container.astro';
+---
+
+<section class="relative overflow-hidden bg-grill-orange py-16">
+  <!-- Marquee -->
+  <div class="relative flex overflow-hidden" aria-hidden="true">
+    <div class="animate-marquee flex shrink-0 gap-8 whitespace-nowrap pr-8">
+      {Array.from({ length: 8 }).map(() => (
+        <span class="font-display text-4xl font-bold text-white/20 sm:text-5xl lg:text-6xl">
+          OPEN TILL MIDNIGHT &middot; OPEN TILL MIDNIGHT &middot;
+        </span>
+      ))}
+    </div>
+    <div class="animate-marquee flex shrink-0 gap-8 whitespace-nowrap pr-8">
+      {Array.from({ length: 8 }).map(() => (
+        <span class="font-display text-4xl font-bold text-white/20 sm:text-5xl lg:text-6xl">
+          OPEN TILL MIDNIGHT &middot; OPEN TILL MIDNIGHT &middot;
+        </span>
+      ))}
+    </div>
+  </div>
+
+  <Container class="relative z-10 mt-10 text-center">
+    <h2 class="font-display text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
+      Open till midnight, every night.
+    </h2>
+    <p class="mx-auto mt-4 max-w-xl text-base text-white/80">
+      For dinners that go long, post-cinema cravings, and whatever you're celebrating.
+    </p>
+    <a
+      href="/visit"
+      class="mt-8 inline-block rounded-sm border-2 border-white px-8 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-white hover:text-grill-orange"
+    >
+      Get Directions
+    </a>
+  </Container>
+</section>
