@@ -18,6 +18,14 @@ export default {
         body: ['Inter', 'sans-serif'],
         accent: ['Caveat', 'cursive'],
       },
+      transitionDuration: {
+        350: '350ms',
+        400: '400ms',
+      },
+      transitionTimingFunction: {
+        smooth: 'cubic-bezier(0.22, 1, 0.36, 1)',
+        'smooth-out': 'cubic-bezier(0.33, 1, 0.68, 1)',
+      },
       animation: {
         marquee: 'marquee 60s linear infinite',
         'fade-up': 'fadeUp 0.7s ease-out forwards',

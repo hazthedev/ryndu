@@ -28,12 +28,12 @@ export default function MenuGrid({ items }: MenuGridProps) {
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item, index) => {
         const card = (
-          <article className="group overflow-hidden rounded-sm bg-ivory-cream transition-all duration-350 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-grill-orange/10">
+          <article className="group overflow-hidden rounded-sm bg-ivory-cream transition-transform,box-shadow duration-350 ease-smooth will-change-transform hover:-translate-y-2 hover:shadow-xl hover:shadow-grill-orange/10">
             <div className="aspect-[4/3] overflow-hidden">
               <img
                 src={item.image}
                 alt={item.name}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-500 ease-smooth-out will-change-transform group-hover:scale-105"
                 loading="lazy"
               />
             </div>
