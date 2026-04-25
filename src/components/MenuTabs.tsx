@@ -8,14 +8,14 @@ interface MenuTabsProps {
 
 export default function MenuTabs({ categories, activeCategory, onChange }: MenuTabsProps) {
   return (
-    <div class="sticky top-[72px] z-40 border-b border-white/10 bg-deep-charcoal/95 backdrop-blur-md">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex gap-1 overflow-x-auto py-3 scrollbar-hide">
+    <div className="sticky top-[72px] z-40 border-b border-white/10 bg-deep-charcoal/95 backdrop-blur-md">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex gap-1 overflow-x-auto py-3 scrollbar-hide">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => onChange(cat)}
-              class={`relative shrink-0 rounded-sm px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+              className={`relative shrink-0 rounded-sm px-4 py-2 text-sm font-medium transition-colors duration-200 ${
                 activeCategory === cat
                   ? 'text-grill-orange'
                   : 'text-cream/60 hover:text-cream'

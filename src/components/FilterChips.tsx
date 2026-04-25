@@ -6,7 +6,7 @@ interface FilterChipsProps {
 
 export default function FilterChips({ filters, activeFilters, onToggle }: FilterChipsProps) {
   return (
-    <div class="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-2">
       {filters.map((f) => {
         const active = activeFilters.includes(f.value);
         return (

@@ -16,7 +16,7 @@ import OrderCTA from '../sections/OrderCTA.astro';
   <Navbar />
   <main>
     <MenuHero />
-    <MenuPage client:load />
+    <MenuPage client:only="react" />
     <ReservationsCallout />
     <OrderCTA />
   </main>
