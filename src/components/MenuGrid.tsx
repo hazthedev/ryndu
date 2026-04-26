@@ -28,7 +28,7 @@ export default function MenuGrid({ items }: MenuGridProps) {
     <div className="grid auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item, index) => {
         const card = (
-          <article className="group flex h-full flex-col overflow-hidden rounded-sm bg-ivory-cream transition-all duration-500 ease-smooth will-change-transform hover:-translate-y-1.5 hover:shadow-xl hover:shadow-grill-orange/10">
+          <article className="group flex h-full flex-col overflow-hidden rounded-sm bg-ivory-cream shadow-md shadow-black/0 transition-[transform,box-shadow] duration-300 ease-smooth-out will-change-transform hover:-translate-y-1.5 hover:shadow-xl hover:shadow-grill-orange/20">
             <div className="aspect-[4/3] shrink-0 overflow-hidden">
               <img
                 src={item.image}

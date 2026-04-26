@@ -2,7 +2,8 @@
 const { image, name, description, price, houseFavorite = false } = Astro.props;
 ---
 
-<article data-reveal class="group relative flex h-full flex-col overflow-hidden rounded-sm bg-ivory-cream transition-all duration-500 ease-smooth will-change-transform hover:-translate-y-1.5 hover:shadow-xl hover:shadow-grill-orange/20">
+<div data-reveal class="h-full">
+  <article class="group relative flex h-full flex-col overflow-hidden rounded-sm bg-ivory-cream shadow-md shadow-black/0 transition-[transform,box-shadow] duration-300 ease-smooth-out will-change-transform hover:-translate-y-1.5 hover:shadow-xl hover:shadow-grill-orange/25">
   <div class="aspect-[4/5] shrink-0 overflow-hidden">
     <img
       src={image}
@@ -26,3 +27,4 @@ const { image, name, description, price, houseFavorite = false } = Astro.props;
     )}
   </div>
 </article>
+</div>
