@@ -96,5 +96,25 @@ const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
       import { inject } from '@vercel/analytics';
       inject();
     </script>
+    <script is:inline>
+      (function () {
+        if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+          document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-visible'));
+          return;
+        }
+        const reveal = (entries, obs) => {
+          entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const delay = Number(el.getAttribute('data-reveal-delay')) || i * 60;
+              window.setTimeout(() => el.classList.add('is-visible'), delay);
+              obs.unobserve(el);
+            }
+          });
+        };
+        const io = new IntersectionObserver(reveal, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+        document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+      })();
+    </script>
   </body>
 </html>
